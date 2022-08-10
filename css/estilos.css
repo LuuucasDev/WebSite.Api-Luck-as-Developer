@@ -4,7 +4,7 @@ body {
     background-color: lightgoldenrodyellow;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    /* CSS Reset */
+
     margin: 0;
     padding: 0;
 }
@@ -40,13 +40,13 @@ footer {
     color: white;
     font-weight: bold;
 
-    /* Flexbox: recursos de alinhamento e espaçamento */
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Seletor descendente */
+
 .treinamentos section {
     background-color: white;
     padding: 10px;
@@ -58,7 +58,7 @@ footer {
 .treinamentos {
     display: flex;
     
-    /* space-around, space-between, space-evenly */
+
     justify-content: space-between;
 }
 
