@@ -1,0 +1,79 @@
+.menu {
+    list-style: none;
+    margin: 0; padding: 0;
+    background-color: blue;
+
+    /* Resolvendo o efeito colateral do float */
+    overflow: hidden;
+}
+
+/* Deixando os itens lado a lado */
+.menu li { float: left; }
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: white;
+    /* text-decoration: underline;
+    text-decoration-thickness: 5px; */
+    color: blue;
+}
+
+/* Exercício (Design Responsivo) 
+Crie uma regra condicional para telas de no máximo 760px.
+Dentro desta regra, faça as seguintes alterações:
+
+-Itens do menu: desative a propriedade float
+-Links do menu: alinhe o texto ao centro. */
+/* @media screen and (max-width: 760px) {
+    .menu li { float: none; }
+    .menu a { text-align: center; }
+} */
+
+
+
+/* VERSÃO FINAL */
+
+/* Escondendo inicialmente o ícone */
+.menu li.icone { display: none; }
+
+
+@media screen and (max-width: 760px){
+    /* Escondendo os itens do menu */
+    .menu li { display: none; }
+
+    /* Tornando visível somente o li do menu/icone */
+    .menu li.icone {
+        display: block;
+        float: right;
+    }
+
+
+
+    /* Importante para o posicionamento
+    dos itens contidos dentro do menu */
+    .menu.responsivo { position: relative; }
+
+    /* Posicionando o ícone/menu na parte
+    superior/direita do menu */
+    .menu.responsivo li.icone {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }   
+
+    /* Remoção do float e garantindo
+    a exibição em linha */
+    .menu.responsivo li {
+        float: none;
+        display: inline;
+    }
+}
+
+
+
