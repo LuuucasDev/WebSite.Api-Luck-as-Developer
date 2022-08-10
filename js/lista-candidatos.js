@@ -9,7 +9,7 @@ botao.on('click', function(){
         url: urlCandidatos,
         dataType: 'json',
         method: 'GET',
-        success: function(resposta){ // método
+        success: function(resposta){
 
 
             $.each(resposta, function(indice, item){
